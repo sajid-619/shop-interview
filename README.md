@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Interview Test - Ecommerce
 
-## Getting Started
+## Hello!  👋 
 
-First, run the development server:
+This is a Next.js boilerplate project used as an interview test by [Acrowd](https://acrowd.se). The goal is to test your ability to follow instructions in a simulated "real world project". You will have access to a basic design that must be followed, the store will connect to a [WooCommerce](https://woocommerce.com/) instance with some sample products. In the end, you will have created a simple ecommerce platform based on Next.js.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+The project should be treated as a real project so any best practices that can be applies should be!
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Resources
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- [The Figma Design](https://www.figma.com/file/z7jZJGxVyjScHaNlVVlh6d/Shop-Interview?node-id=0%3A1) - Figma can be used in the browser or downloaded.
+    - An account can be created to allow for more advanced inspection of sizes, colors and fonts.
+- [WooCommerce API Documentation](https://woocommerce.github.io/woocommerce-rest-api-docs) - Use the config below:
+    - Wordpress base URL: `https://shop-interview.acrowd.se`
+    - WooCommerce Consumer Key: `ck_4c0d8a4f83c78831c200e39d1f371e92d419d863`
+    - WooCommerce Consumer Secret: `cs_1eb6c96b9a32942b52a868da3ad28698b15873ff`
+- [Next.js Documentation](https://nextjs.org/docs) - Learn about Next.js features and API.
+- [Wordpress/WooCommerce login](https://shop-interview.acrowd.se/wp-admin) - No changes must be made, login is allowed to validate conneciton.
+    - Username: `acrowd`
+    - Password: `$P$BBFSHDQjE4AXKQUfI`
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+---
 
-## Learn More
+## Specification
 
-To learn more about Next.js, take a look at the following resources:
+You are to build an ecommerce platform based on the provided design. The store must fetch data from the provided WooCommerce instance. The following functions are required:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Load and display products
+    - Categorize products with a router and allow for nested categories, eg. `/shop/women/hoodies`
+    - Once in a category, the title should change and the sub categories will be displayed
+- Display single products using a route like `/product/{product-slug}`
+    - A breadcrumb that displays the products parent categories, eg. `Shop / Women / Hoodies`
+    - Pricing that allows for "sales"
+    - List of featured products
+- A cart that allows the following: `adding`, `removal` and `change in quantity`
+    - The cart route should be `/cart`
+- A mock checkout that contains the required fields and once submitted creates an order in WooCommerce
+    - The checkout route should be `/checkout`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<br>
 
-## Deploy on Vercel
+There are no requirements on how you structure the project or which (if any) packages you use. But as in any project readability, scalability and best practices are all areas in where we strive to improve ourselves.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Optional functions
+
+These functions in no particular order are optional but will really increase the value of the project:
+
+- Add a basic menu bar for easier navigation
+- Make sure that everything is as SEO friendly as possible
+- Optimize for Google Lighthouse scores
+- Allow for an image gallery on the product page instead of a single image
+- Change product route to include categories, eg. `/shop/women/hoodies/{product-slug}`
+- Secure the WooCommerce requests with a Next.js API endpoint to not expose the keys
+- Adjust design to fit mobile displays
+
+---
+
+## Delivery
+
+Clone this repo and once the project is completed, push the changes and send your repo URL to your contact person at Acrowd. For any questions about the project that's not specified here, don't hesitate to contact us!
