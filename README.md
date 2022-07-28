@@ -6,6 +6,8 @@ This is a Next.js boilerplate project used as an interview test by [Acrowd](http
 
 The project should be treated as a real project so any best practices that can be applies should be!
 
+Please read the instructions below on how to run the project
+
 ---
 
 ## Resources
@@ -62,3 +64,22 @@ These functions in no particular order are optional but will really increase the
 ## Delivery
 
 Clone this repo and once the project is completed, push the changes and send your repo URL to your contact person at Acrowd. For any questions about the project that's not specified here, don't hesitate to contact us!
+
+##Instructions
+
+To run the project copy the following in your .env file:
+
+`
+NEXT_PUBLIC_SITE_URL={YOUR_LOCALHOST_URL}
+WORDPRESS_SITE_URL={YOUR_WORDPRESS_URL}
+WOOCOMMERCE_CONSUMER_KEY={YOUR_WOOCOMMERCE_CONSUMER_KEY}
+WOOCOMMERCE_CONSUMER_SECRET={YOUR_WOOCOMMERCE_CONSUMER_SECRET}
+`
+
+To start the project run the following command
+
+`
+yarn install
+yarn run dev
+`
+and then click on http://localhost:3000
