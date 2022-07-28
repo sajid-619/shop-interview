@@ -70,16 +70,24 @@ Clone this repo and once the project is completed, push the changes and send you
 To run the project copy the following in your .env file:
 
 `
+
 NEXT_PUBLIC_SITE_URL={YOUR_LOCALHOST_URL}
+
 WORDPRESS_SITE_URL={YOUR_WORDPRESS_URL}
+
 WOOCOMMERCE_CONSUMER_KEY={YOUR_WOOCOMMERCE_CONSUMER_KEY}
+
 WOOCOMMERCE_CONSUMER_SECRET={YOUR_WOOCOMMERCE_CONSUMER_SECRET}
+
 `
 
 To start the project run the following command
 
 `
 yarn install
+
 yarn run dev
+
 `
+
 and then click on http://localhost:3000
